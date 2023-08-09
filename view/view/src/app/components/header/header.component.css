@@ -1,0 +1,61 @@
+@import '~bootstrap/dist/css/bootstrap.min.css';
+
+/* navbar.component.scss */
+
+/* Estilizando o botão de toggle do menu responsivo */
+.navbar-toggler {
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  .navbar-toggler-icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    background-image: url("/view/view/src/assets/icons/Design\ sem\ nome.png");
+  }
+  
+  /* Estilizando os links da navbar */
+  .navbar-nav {
+    .nav-item {
+      margin-left: 1rem;
+  
+      .nav-link {
+        color: #333;
+        font-weight: bold;
+        text-transform: uppercase;
+        transition: color 0.3s ease-in-out;
+  
+        &:hover,
+        &.active {
+          color: #007bff;
+        }
+      }
+    }
+  }
+  
+  /* Estilizando a navbar */
+  .navbar {
+    background: (transparent);
+    padding: 1rem 0;
+    min-height: 30px; /* Defina a altura desejada para a navbar */
+    max-height: 120px;
+  
+    .navbar-brand {
+      color: #007bff;
+      font-size: 1.5rem;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: color 0.3s ease-in-out;
+  
+      &:hover {
+        color: #0056b3;
+      }
+    }
+  }
+  
+.logo-img {
+  width: 150px; /* Defina a largura desejada */
+  height: auto; /* Deixe a altura ser ajustada automaticamente */
+}
