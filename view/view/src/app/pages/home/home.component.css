@@ -46,7 +46,7 @@
   .image-container {
     flex: 1;
     overflow: hidden;
-    border-radius: 50%;
+    border-radius: 5%;
     opacity: 0;
     border: 2px solid #fff; /* Borda com 2px de largura e cor branca (#fff) */
     box-shadow: 
