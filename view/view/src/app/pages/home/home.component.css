@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700&display=swap');
+
+
+
 .banner {
     position: relative;
     padding: 100px 0;
@@ -68,7 +72,7 @@
   }
   
   .text-container h1 {
-    font-family: Arial, sans-serif; /* Usando Arial como fonte e, caso não esteja disponível, uma fonte sans-serif como alternativa */
+    font-family: 'Nunito', sans-serif; /* Usando Arial como fonte e, caso não esteja disponível, uma fonte sans-serif como alternativa */
     font-size: 36px;
     font-weight: bold;
     color: #ffffff;
@@ -76,7 +80,7 @@
   }
   
   .text-container p {
-    font-family: Georgia, serif; /* Usando Georgia como fonte e, caso não esteja disponível, uma fonte serif como alternativa */
+    font-family: 'Nunito', sans-serif; /* Usando Georgia como fonte e, caso não esteja disponível, uma fonte serif como alternativa */
     font-size: 16px;
     color: #ffffff;
   }

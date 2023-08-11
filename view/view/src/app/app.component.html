@@ -1,12 +1,8 @@
-<body>
 
-  <div class="container1">
     <app-header></app-header>
     <app-home  *ngIf="isHomePage()"></app-home>
+    <app-sobre *ngIf="isHomePage()"></app-sobre>
+    <app-criarconta *ngIf="isHomePage()"></app-criarconta>
     <router-outlet></router-outlet>
     <app-footer *ngIf="isHomePage()"></app-footer>
-  </div>
-
-
   
-</body>

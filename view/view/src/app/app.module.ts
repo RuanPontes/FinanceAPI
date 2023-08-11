@@ -22,6 +22,9 @@ import { LocalDateTimePipe } from './shared/pipes/local-date-time.pipe';
 import { ExtratoAgenciaContaComponent } from './pages/contas/caixa/extrato-agencia-conta/extrato-agencia-conta.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
+import { SobreComponent } from './components/sobre/sobre.component';
+import { CriarcontaComponent } from './components/criarconta/criarconta.component';
+
 
 
 
@@ -47,6 +50,9 @@ import { HomeComponent } from './pages/home/home.component';
     ExtratoAgenciaContaComponent,
     FooterComponent,
     HomeComponent,
+    SobreComponent,
+    CriarcontaComponent,
+    
     
     
     

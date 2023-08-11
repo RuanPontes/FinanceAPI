@@ -4,25 +4,16 @@
 <div class="container1">
 	<section class="cabecalhoLista">
 	  <div class="nameListaTodosClientes">
-		<img
-		  src="../../../../assets/icons/iconsUtils/iconClientes.png"
-		  width="40px"
-		  height="40px"
-		  class="icon"
-		  style="margin-left: 1rem; margin-right: 0.3rem"
-		/>
+		<img src="../../../../assets/icons/iconsUtils/iconClientes.png" width="40px" height="40px" class="icon" style="margin-left: 1rem; margin-right: 0.3rem" />
 		<h3 class="nameCliente">Todos os clientes</h3>
 	  </div>
 	  <div class="testando">
-		<a style="margin-right: 0.8rem" class="btn-primary" routerLink="/"
-		  ><img src="../../../assets/icons/home.png" width="40px" height="35px"
-		/></a>
-		<a class="btn-primary" routerLink="cadastrar"
-		  ><img
-			src="../../../../assets/icons/iconsUtils/add-user2.png"
-			width="40px"
-			height="35px"
-		/></a>
+		<a style="margin-right: 0.8rem" class="btn-primary" routerLink="/">
+		  <img src="../../../assets/icons/home.png" width="40px" height="35px" />
+		</a>
+		<a class="btn-primary" routerLink="cadastrar">
+		  <img src="../../../../assets/icons/iconsUtils/add-user2.png" width="40px" height="35px" />
+		</a>
 	  </div>
 	</section>
   
@@ -46,37 +37,21 @@
 		  <td>{{ cliente.observacoes }}</td>
 		  <td>
 			<div class="dropdown">
-			  <button
-				class="btn btn-secondary dropdown-toggle"
-				type="button"
-				id="dropdownMenuButton1"
-				data-bs-toggle="dropdown"
-				aria-expanded="false"
-			  >
+			  <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
 				Ações
 			  </button>
 			  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
 				<li>
-				  <a
-					class="dropdown-item"
-					[routerLink]="['/contas/cadastrar', cliente.id]"
-					>Criar Conta</a
-				  >
+				  <a class="dropdown-item" [routerLink]="['/contas/cadastrar', cliente.id]">Criar Conta</a>
 				</li>
 				<li>
-				  <a class="dropdown-item" [routerLink]="['editar', cliente.id]"
-					>Editar</a
-				  >
+				  <a class="dropdown-item" [routerLink]="['editar', cliente.id]">Editar</a>
 				</li>
 				<li>
-				  <a class="dropdown-item" (click)="confirmar(cliente.id)"
-					>Remover</a
-				  >
+				  <a class="dropdown-item" (click)="confirmar(cliente.id)">Remover</a>
 				</li>
 				<li>
-				  <a class="dropdown-item" [routerLink]="['/contas', cliente.cpf]"
-					>Listar Contas</a
-				  >
+				  <a class="dropdown-item" [routerLink]="['/contas', cliente.cpf]">Listar Contas</a>
 				</li>
 			  </ul>
 			</div>
@@ -85,3 +60,4 @@
 	  </tbody>
 	</table>
   </div>
+  
