@@ -1,0 +1,12 @@
+<form>
+    <label for="cpf">CPF do Cliente:</label>
+    <input type="text" id="cpf" name="cpf" [(ngModel)]="cpf">
+    
+    <div class="error-message">{{ errorMessage }}</div> <!-- Exibição de mensagens de erro -->
+  
+    <button (click)="login()" [disabled]="isLoading"> <!-- Botão desabilitado durante o carregamento -->
+      <span *ngIf="isLoading">Carregando...</span>
+      <span *ngIf="!isLoading">Login</span>
+    </button>
+  </form>
+  
