@@ -24,6 +24,8 @@ import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './pages/home/home.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { CriarcontaComponent } from './components/criarconta/criarconta.component';
+import { LoginComponent } from './pages/login/login.component';
+
 
 
 
@@ -52,6 +54,8 @@ import { CriarcontaComponent } from './components/criarconta/criarconta.componen
     HomeComponent,
     SobreComponent,
     CriarcontaComponent,
+    LoginComponent,
+    
     
     
     

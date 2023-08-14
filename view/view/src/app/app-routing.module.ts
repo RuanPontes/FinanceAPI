@@ -14,19 +14,24 @@ import { ContasComponent } from './pages/contas/contas.component';
 import { ListaContasCpfComponent } from './pages/contas/lista-contas-cpf/lista-contas-cpf.component';
 import { IndexComponent } from './pages/index/index.component';
 import { HomeComponent } from './pages/home/home.component';
+import { LoginComponent } from './pages/login/login.component';
+
 
 
 
 const routes: Routes = [
+
   {
     path: '', component: IndexComponent
   },
-  { path: '', component: HomeComponent
+  { 
+    path: '', component: HomeComponent
    
   },
   {
     path: 'clientes', component: ClientesComponent
   },
+  { path: 'login', component: LoginComponent },
   {
     path: 'contas', component: ContasComponent
   },

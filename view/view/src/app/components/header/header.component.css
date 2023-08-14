@@ -59,3 +59,23 @@
   width: 150px; /* Defina a largura desejada */
   height: auto; /* Deixe a altura ser ajustada automaticamente */
 }
+
+
+/* header.component.css */
+.custom-button-3d {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 12px 23px;
+  border-radius: 5%; /* Torna o botão redondo */
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out; /* Adiciona uma transição suave */
+}
+
+.custom-button-3d:hover {
+  transform: scale(1.1); /* Faz o botão aumentar de tamanho ao passar o mouse */
+}
+
+
+
