@@ -6,7 +6,7 @@
     position: relative;
     padding: 100px 0;
     color: #fff;
-    background-image: linear-gradient(to bottom, #13294b, #2d5fa8, #5ca8e8);
+    background: linear-gradient(to right, #2ebbec, #3061c8, #29338b, #2a4c71);
     opacity: 0;
     transform: translateY(-50px);
     animation: fadeInSlideIn 1.5s forwards;

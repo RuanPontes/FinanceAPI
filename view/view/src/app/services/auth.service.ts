@@ -8,7 +8,7 @@ import { ICliente } from 'src/app/interfaces/cliente';
   providedIn: 'root'
 })
 export class AuthService {
-  private isAuthenticated = false;
+  public isAuthenticated = false;
 
   constructor(private http: HttpClient) {}
 
@@ -32,6 +32,8 @@ export class AuthService {
 
   logout(): void {
     this.isAuthenticated = false;
+    // Implemente a lógica específica de logout aqui, por exemplo, limpar tokens ou informações de usuário.
+    // Por enquanto, estamos apenas marcando isAuthenticated como false.
   }
 
   getIsAuthenticated(): boolean {

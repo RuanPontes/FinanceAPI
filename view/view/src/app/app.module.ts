@@ -12,7 +12,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CaixaComponent } from './pages/contas/caixa/caixa.component';
 import { DepositoComponent } from './pages/contas/caixa/deposito/deposito.component';
 import { SaqueComponent } from './pages/contas/caixa/saque/saque.component';
-import { IndexComponent } from './pages/index/index.component';
+
 import { TransferenciaComponent } from './pages/contas/caixa/transferencia/transferencia.component';
 import { ContasCadastrarEditarComponent } from './pages/contas/contas-cadastrar-editar/contas-cadastrar-editar.component';
 import { CpfPipe } from './shared/pipes/cpf.pipe';
@@ -25,6 +25,10 @@ import { HomeComponent } from './pages/home/home.component';
 import { SobreComponent } from './components/sobre/sobre.component';
 import { CriarcontaComponent } from './components/criarconta/criarconta.component';
 import { LoginComponent } from './pages/login/login.component';
+import { OperacoesComponent } from './components/operacoes/operacoes.component';
+import { EmcimadofooterComponent } from './components/emcimadofooter/emcimadofooter.component';
+import { OnlyNumbersDirective } from './diretivas/only-numbers.directive';
+import { TransacoesComponent } from './pages/deposito/transacoes.component';
 
 
 
@@ -42,7 +46,7 @@ import { LoginComponent } from './pages/login/login.component';
     CaixaComponent,
     DepositoComponent,
     SaqueComponent,
-    IndexComponent,
+    
     TransferenciaComponent,
     ContasCadastrarEditarComponent,
     CpfPipe,
@@ -55,6 +59,10 @@ import { LoginComponent } from './pages/login/login.component';
     SobreComponent,
     CriarcontaComponent,
     LoginComponent,
+    OperacoesComponent,
+    EmcimadofooterComponent,
+    OnlyNumbersDirective,
+    TransacoesComponent,
     
     
     

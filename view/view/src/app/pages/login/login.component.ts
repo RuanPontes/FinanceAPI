@@ -17,6 +17,7 @@ export class LoginComponent {
   login(): void {
     if (this.cpf.trim() === '') {
       this.errorMessage = 'Por favor, insira o CPF do cliente.';
+      this.showErrorMessage();
       return;
     }
 
@@ -28,12 +29,21 @@ export class LoginComponent {
           this.router.navigate(['/']); // Redirecionar para a rota raiz (página inicial)
         } else {
           this.errorMessage = 'CPF não encontrado, inválido ou cliente inativo.';
+          this.showErrorMessage();
         }
       },
       error => {
         this.isLoading = false;
         this.errorMessage = 'Erro ao efetuar o login. Por favor, tente novamente mais tarde.';
+        this.showErrorMessage();
       }
     );
+  }
+
+  showErrorMessage(): void {
+    const errorMessageElement = document.querySelector('.error-message');
+    if (errorMessageElement) {
+      errorMessageElement.classList.add('show');
+    }
   }
 }

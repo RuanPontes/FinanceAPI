@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { IndexComponent } from './index.component';
+import { EmcimadofooterComponent } from './emcimadofooter.component';
 
-describe('IndexComponent', () => {
-  let component: IndexComponent;
-  let fixture: ComponentFixture<IndexComponent>;
+describe('EmcimadofooterComponent', () => {
+  let component: EmcimadofooterComponent;
+  let fixture: ComponentFixture<EmcimadofooterComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ IndexComponent ]
+      declarations: [ EmcimadofooterComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(IndexComponent);
+    fixture = TestBed.createComponent(EmcimadofooterComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

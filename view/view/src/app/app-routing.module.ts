@@ -12,28 +12,25 @@ import { TransferenciaComponent } from './pages/contas/caixa/transferencia/trans
 import { ContasCadastrarEditarComponent } from './pages/contas/contas-cadastrar-editar/contas-cadastrar-editar.component';
 import { ContasComponent } from './pages/contas/contas.component';
 import { ListaContasCpfComponent } from './pages/contas/lista-contas-cpf/lista-contas-cpf.component';
-import { IndexComponent } from './pages/index/index.component';
-import { HomeComponent } from './pages/home/home.component';
 import { LoginComponent } from './pages/login/login.component';
+import { AuthGuard } from 'src/app/guard/auth.guard';
+import { TransacoesComponent } from './pages/deposito/transacoes.component';
 
 
 
 
 const routes: Routes = [
-
+ 
   {
-    path: '', component: IndexComponent
+    path: 'transacoes', component: TransacoesComponent,  canActivate: [AuthGuard]
   },
-  { 
-    path: '', component: HomeComponent
-   
-  },
+ 
   {
-    path: 'clientes', component: ClientesComponent
+    path: 'clientes', component: ClientesComponent,  canActivate: [AuthGuard]
   },
   { path: 'login', component: LoginComponent },
   {
-    path: 'contas', component: ContasComponent
+    path: 'contas', component: ContasComponent , canActivate: [AuthGuard]
   },
   {
     path: 'contas/cadastrar', component: ContasCadastrarEditarComponent

@@ -10,7 +10,12 @@ import { AuthService } from 'src/app/services/auth.service';
 export class HeaderComponent {
   constructor(public authService: AuthService, private router: Router) {}
 
+  logout(): void {
+    this.authService.logout();
+    this.router.navigate(['/login']);
+  }
+
   goToLogin(): void {
-    this.router.navigate(['/login']); // Redireciona para a tela de login
+    this.router.navigate(['/login']);
   }
 }
