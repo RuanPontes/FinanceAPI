@@ -51,6 +51,3 @@ O sistema Finance Business está em andamento. Sendo atualizado constantemente, 
 
 ## ⚠️ Este projeto está em andamento ⚠️
 
-<br>
-
-[⬆ Voltar ao topo](#nome-do-projeto)<br>
