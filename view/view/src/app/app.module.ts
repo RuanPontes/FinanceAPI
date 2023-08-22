@@ -36,6 +36,7 @@ import { TransacoesComponent } from './pages/deposito/transacoes.component';
 
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

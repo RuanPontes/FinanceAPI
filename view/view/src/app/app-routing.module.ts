@@ -19,10 +19,14 @@ import { TransacoesComponent } from './pages/deposito/transacoes.component';
 
 
 
+
 const routes: Routes = [
  
   {
     path: 'transacoes', component: TransacoesComponent,  canActivate: [AuthGuard]
+  },
+  {
+    path: 'saque', component: SaqueComponent,  canActivate: [AuthGuard]
   },
  
   {
@@ -57,7 +61,7 @@ const routes: Routes = [
     path: 'clientes/editar/:id', component: ClientesCadastrarEditarComponent
   },
   {
-    path: 'caixa/deposito', component: DepositoComponent,
+    path: 'caixa/deposito', component: DepositoComponent,  canActivate: [AuthGuard]
   },
   {
     path: 'caixa/deposito/:id', component: DepositoComponent,
@@ -69,7 +73,7 @@ const routes: Routes = [
     path: 'caixa/saque/:id', component: SaqueComponent,
   },
   {
-    path: 'caixa/transferencia', component: TransferenciaComponent,
+    path: 'caixa/transferencia', component: TransferenciaComponent,  canActivate: [AuthGuard]
   },
   {
     path: 'caixa/transferencia/:id', component: TransferenciaComponent,

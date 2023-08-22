@@ -1,10 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Router, ActivatedRoute } from '@angular/router';
-import { IConta } from 'src/app/interfaces/conta';
-import { IDepositoSaque } from 'src/app/interfaces/deposito-saque';
-import { ContasService } from 'src/app/services/contas.service';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
+import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
+import { AuthService } from 'src/app/services/auth.service';
+import { IConta } from 'src/app/interfaces/conta';
+import { Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-saque',
@@ -12,42 +13,66 @@ import Swal from 'sweetalert2';
   styleUrls: ['./saque.component.css']
 })
 export class SaqueComponent implements OnInit {
-
-  formSaque: FormGroup = new FormGroup({
-    agencia: new FormControl('', Validators.required),
-    numeroConta: new FormControl('', Validators.required),
-    valor: new FormControl('', Validators.required),
-  });
+  formSaque: FormGroup;
+  clienteConta$!: Observable<IConta | null>;
 
   constructor(
-    private contaService: ContasService,
+    private fb: FormBuilder,
+    private http: HttpClient,
     private router: Router,
-    private route: ActivatedRoute) { }
-
-  ngOnInit(): void {
-    const id = this.route.snapshot.paramMap.get('id');
-    if (id){
-      this.contaService.buscarPorIdString(id).subscribe((result: IConta) => {
-        this.formSaque = this.preencheSacar(result);
-      })
-    }
-  }
-
-  saque() {
-    const saque: IDepositoSaque = this.formSaque.value;
-    this.contaService.saque(saque).subscribe((result => {
-      Swal.fire('Sucesso!', 'Saque concluído!', 'success')
-      this.router.navigate(['/contas']);
-    }), error => {
-      Swal.fire('Erro no saque', 'Aconteceu alguma coisa no seu saque', 'error');
+    private authService: AuthService
+  ) {
+    this.formSaque = this.fb.group({
+      agencia: [''],
+      numeroConta: [''],
+      valor: ['', Validators.required]
     });
   }
-  preencheSacar(conta?: IConta){
-    return this.formSaque = new FormGroup({
-      agencia: new FormControl(conta?.agencia, Validators.required),
-      numeroConta: new FormControl(conta?.numero, Validators.required),
-      valor: new FormControl(null, Validators.required),
-    })
+
+  ngOnInit(): void {
+    console.log('ngOnInit() foi chamado');
+  
+    const clienteConta = this.authService.getAuthenticatedAccount();
+    console.log('Conta autenticada:', clienteConta); // Verifique o objeto retornado
+  
+    this.clienteConta$ = of(clienteConta);
+  
+    this.clienteConta$.subscribe((clienteConta) => {
+      if (clienteConta) {
+        console.log('Dados da conta obtidos:', clienteConta);
+  
+        this.formSaque.patchValue({
+          agencia: clienteConta.agencia,
+          numeroConta: clienteConta.numero
+        });
+      } else {
+        console.log('Nenhum dado da conta encontrado');
+      }
+    });
   }
 
+  saque(): void {
+    if (this.formSaque.valid) {
+      const dadosSaque = this.formSaque.value;
+      this.http.put('http://localhost:8080/treinamento/rest/contas/sacar', dadosSaque)
+        .subscribe(
+          (response) => {
+            Swal.fire({
+              icon: 'success',
+              title: 'Saque efetuado com sucesso!',
+              text: 'O saque foi realizado com sucesso.',
+            });
+            this.router.navigate(['/']);
+          },
+          (error) => {
+            Swal.fire({
+              icon: 'error',
+              title: 'Erro no saque',
+              text: 'Ocorreu um erro ao tentar efetuar o saque.',
+            });
+            console.error('Erro no Saque:', error);
+          }
+        );
+    }
+  }
 }

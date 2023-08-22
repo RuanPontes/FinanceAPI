@@ -8,8 +8,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
-    background: #a4c6e7;
+    min-height: 100vh;   
 }
 .login{
     background: rgba(0,0,0,.5);

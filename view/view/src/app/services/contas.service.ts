@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { ICliente } from '../interfaces/cliente';
@@ -20,7 +20,11 @@ export class ContasService {
   }
 
   saque(saqueDeposito: IDepositoSaque) {
-    return this.http.put<IDepositoSaque>(`${this.api}/${this.endpoint}/saque`, saqueDeposito);
+    const headers = new HttpHeaders({
+      'Content-Type': 'application/json'
+    });
+  
+    return this.http.put<IDepositoSaque>(`${this.api}/${this.endpoint}/saque`, saqueDeposito, { headers });
   }
   deposito(deposito: IDepositoSaque) {
     return this.http.put<IDepositoSaque>(`${this.api}/${this.endpoint}/deposito`, deposito);

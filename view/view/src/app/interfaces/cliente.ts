@@ -1,3 +1,5 @@
+import { IConta } from "./conta";
+
 export interface ICliente {
     id: number;
     nome: string;
@@ -5,6 +7,7 @@ export interface ICliente {
     email: string;
     observacoes: string;
     ativo:boolean;
+    conta?: IConta;
 }
 export interface ClienteContaResponse {
   id: string;

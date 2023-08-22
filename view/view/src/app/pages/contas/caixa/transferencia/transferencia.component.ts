@@ -36,7 +36,7 @@ export class TransferenciaComponent implements OnInit {
     const transferencia: ITransferencia = this.formTransfe.value;
     this.transferenciaService.transferencia(transferencia).subscribe(result => {
       Swal.fire("Tudo certo!", 'Transferência realizada com sucesso!', 'success');
-      this.router.navigate(['/contas']);
+      this.router.navigate(['/']);
     }, error => {
       Swal.fire('Digitou algo errado?', 'Aconteceu um erro na sua transferência', 'error');
       console.error(error);

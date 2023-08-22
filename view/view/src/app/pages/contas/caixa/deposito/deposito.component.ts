@@ -36,7 +36,7 @@ export class DepositoComponent implements OnInit {
     const deposito: IDepositoSaque = this.formConta.value;
     this.contaService.deposito(deposito).subscribe((result => {
       Swal.fire('Sucesso!', 'Depósito concluído!', 'success')
-      this.router.navigate(['/contas']);
+      this.router.navigate(['/']);
     }), error => {
       console.error(error);
     });

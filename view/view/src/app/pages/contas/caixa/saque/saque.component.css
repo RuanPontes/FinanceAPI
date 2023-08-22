@@ -1,71 +1,76 @@
-.cabecalhoLista {
-  border-top-right-radius: 10px;
-  border-top-left-radius: 10px;
+.container {
+  margin: 2rem auto;
+  background-color: #d1dbec;
+  border-radius: 10px;
+  padding: 1rem;
+  width: 100%;
+  max-width: 400px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.header {
   display: flex;
-  /* align-items: center; */
-  background-color: #000000;
   justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
 }
-.cabecalhoLista div {
-  border-radius: 5px;
-  padding-top: 10px;
-  padding-right: 15px;
-}
-.cabecalhoLista div a:hover {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
-    rgba(0, 0, 0, 0.22) 0px 10px 10px;
-}
-.nameListaTodasContas {
+
+.account-info {
   display: flex;
+  align-items: center;
 }
-.testando a:hover {
+
+.icon {
+  width: 40px;
+  height: 35px;
+  margin-right: 0.3rem;
+}
+
+.account-name {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.back-button {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
   cursor: pointer;
 }
 
-.nameSaque {
-  font-size: 24px;
-  display: inline-flex;
-  color: white;
-  padding-top: 5px;
-}
-* {
-  list-style-type: none;
+.withdraw-form label {
+  color: rgb(0, 0, 0);
+  padding: 0.5rem;
+  border-radius: 5px;
 }
 
-.container1 {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-self: center;
-  margin: 2rem auto;
-  background-color: rgb(209, 219, 236);
+.form-control {
+  margin-top: 0.3rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
   border-radius: 10px;
-}
-.container2 {
-  padding: 10px;
-}
-.break {
-  flex-basis: 100%;
-  height: 0;
-}
-.containerTeste {
-  /* margin: 0 auto; */
-  display: flex;
-  justify-content: center;
+  transition: border-color 0.2s;
+  width: 100%;
 }
 
-.infoCliente {
-  display: flex;
-  justify-items: center;
-  flex-wrap: wrap;
+.form-control:focus {
+  border-color: #007bff;
 }
 
-h4 {
-  font-size: 1.8rem;
+.btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: #0d6efd;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  transition: background-color 0.2s;
+  width: 100%;
 }
 
-.testedo {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+.btn:hover {
+  background-color: #0056b3;
 }
