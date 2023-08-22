@@ -34,6 +34,7 @@ O projeto consiste em uma API desenvolvida em Java com Spring, que realiza as re
 ## Frontend 🚀
 
 - Angular
+- TypeScript
 - RxJS
 - Bootstrap
 - HTML5
