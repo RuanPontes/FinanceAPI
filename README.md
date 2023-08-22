@@ -14,6 +14,7 @@ O projeto consiste em uma API desenvolvida em Java com Spring, que realiza as re
 
 - 🔄 **Em Andamento:** Cadastro de Clientes e Contas.
 - 🔄 **Em Andamento:** Visualização de Extrato.
+- 🔄 **Em Andamento:** Reponsividade.
 - ✅ **Completo:** Login e Logout.
 - ✅ **Completo:** Realização de Transações:
   - Saque
