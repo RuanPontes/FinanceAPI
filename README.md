@@ -1,53 +1,42 @@
-# Finance Business 
+# Finance Business
 
+> Sistema Bancário desenvolvido utilizando Spring e Angular.
 
-> Sistema Bancario, desenvolvido utilizando Spring e Angular.
+O sistema Finance Business está em andamento, sendo constantemente atualizado com modificações na estrutura do projeto e a finalização do backend, desenvolvido em Java com o uso do framework Spring.
 
-O sistema Finance Business está em andamento. Sendo atualizado constantemente, haverá modificações na estrutura do projeto e o término do backend, desenvolvido com Java, usando o framework Spring.
+## Sobre o Projeto
 
-## Do que se trata este projeto?
+A finalidade deste projeto é aplicar os conhecimentos adquiridos em diversos cursos que já concluí ou estou prestes a concluir, aprimorando minhas habilidades de programação.
 
-<p> A finalidade deste projeto é a aplicação dos meus conhecimentos adquiridos em diversos cursos nos quais eu conclui ou estou concluindo, para aprimorar minhas habilidades com programação. </p>
+## Funcionalidades (ou Funcionalidades Futuras)
 
-## Funcionalidades (ou func. futuras)
+O projeto consiste em uma API desenvolvida em Java com Spring, que realiza as requisições ao banco de dados, e um frontend desenvolvido em Angular. Ao finalizar o projeto, as seguintes funcionalidades estarão disponíveis:
 
-<p> O projeto consiste em uma API, desenvolvida em Java com Spring, onde ela que fará todas as requisições no meu banco de dados e um front-end, desenvolvido em Angular. O projeto, até o término dele, terá as seguintes funcionalidades: </p> 
-<ul>
-  <li> Cadastro de Clientes e Contas.</li>
-  <li> Extrato.</li>
-  <li>
-    Transações:
-    <ul>
-      <li> Saque;</li>
-      <li> Deposito;</li>
-      <li> Transferencia.</li>
-    </ul>
-  </li>
-</ul>
+- 🔄 **Em Andamento:** Cadastro de Clientes e Contas.
+- 🔄 **Em Andamento:** Visualização de Extrato.
+- ✅ **Completo:** Login.
+- ✅ **Completo:** Realização de Transações:
+  - Saque
+  - Depósito
+  - Transferência
 
-## 🚀 Back - End
+## Backend 🚀
 
-<ul>
-  <li> Java 11 </li>
-  <li> Spring Boot </li>
-  <li> Spring Data JPA </li>
-  <li> Hibernate </li>
-  <li> MySQL </li>
-  <li> Maven </li>
-  <li> Lombok </li>
-  <li> Swagger </li>
-  
+- Java 11
+- Spring Boot
+- Spring Data JPA
+- Hibernate
+- MySQL
+- Maven
+- Lombok
+- Swagger
 
-</ul>
+## Frontend 🚀
 
-## 🚀 Front - End
+- Angular
+- RxJS
+- Bootstrap
+- HTML5
+- CSS3
 
-<ul>
-  <li> Angular</li>
-  <li> rxjs</li>
-  <li> bootstrap </li>
-  <li> HTML5 CSS3</li>
-</ul>
-
-## ⚠️ Este projeto está em andamento ⚠️
-
+## ⚠️ Este Projeto Está em Andamento ⚠️
