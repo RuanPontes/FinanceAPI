@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import Swal from 'sweetalert2';
 import { AuthService } from 'src/app/services/auth.service';
 
 @Component({
@@ -16,8 +17,7 @@ export class LoginComponent {
 
   login(): void {
     if (this.cpf.trim() === '') {
-      this.errorMessage = 'Por favor, insira o CPF do cliente.';
-      this.showErrorMessage();
+      this.showCpfAlert();
       return;
     }
 
@@ -26,24 +26,35 @@ export class LoginComponent {
       result => {
         this.isLoading = false;
         if (result) {
-          this.router.navigate(['/']); // Redirecionar para a rota raiz (página inicial)
+          this.router.navigate(['/']);
         } else {
           this.errorMessage = 'CPF não encontrado, inválido ou cliente inativo.';
-          this.showErrorMessage();
+          this.showErrorMessageWithSweetAlert();
         }
       },
       error => {
         this.isLoading = false;
         this.errorMessage = 'Erro ao efetuar o login. Por favor, tente novamente mais tarde.';
-        this.showErrorMessage();
+        this.showErrorMessageWithSweetAlert();
       }
     );
   }
 
-  showErrorMessage(): void {
-    const errorMessageElement = document.querySelector('.error-message');
-    if (errorMessageElement) {
-      errorMessageElement.classList.add('show');
-    }
+  showCpfAlert(): void {
+    Swal.fire({
+      icon: 'warning',
+      title: 'CPF em branco',
+      text: 'Por favor, insira o CPF do cliente antes de fazer o login.',
+      confirmButtonText: 'OK'
+    });
+  }
+
+  showErrorMessageWithSweetAlert(): void {
+    Swal.fire({
+      icon: 'error',
+      title: 'Erro',
+      text: this.errorMessage,
+      confirmButtonText: 'OK'
+    });
   }
 }
