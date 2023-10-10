@@ -68,8 +68,8 @@ O backend estará em execução em  `http://localhost:8080/treinamento/swagger-u
 ### Configuração do Frontend
 
 1. Navegue até o diretório do projeto frontend:
-2. Instale as dependências do Angular:
-3. Inicie o servidor de desenvolvimento do Angular:
+2. Instale as dependências do Angular: (npm i)
+3. Inicie o servidor de desenvolvimento do Angular: (npm start)
 
 O frontend estará em execução em `http://localhost:4200`.
 
