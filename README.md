@@ -3,6 +3,10 @@
 ![Descrição da Imagem](view/view/src/assets/github/Inicio.png)
 ![Descrição da Imagem](view/view/src/assets/github/extrato.png)
 ![Descrição da Imagem](view/view/src/assets/github/operacoes.png)
+![Descrição da Imagem](view/view/src/assets/github/Deposito.png)
+![Descrição da Imagem](view/view/src/assets/github/Saque.png)
+![Descrição da Imagem](view/view/src/assets/github/Transferencia.png)
+![Descrição da Imagem](view/view/src/assets/github/Telalogin.png)
 
 > Sistema Bancário desenvolvido utilizando Spring e Angular.
 
