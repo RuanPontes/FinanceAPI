@@ -3,11 +3,13 @@ import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { ICliente } from '../interfaces/cliente';
 
+
+
 @Injectable({
   providedIn: 'root'
 })
 export class ClientesService {
-  api = environment.api;
+  api = environment;
   endpoint = 'clientes';
   constructor(private http: HttpClient) { }
 

@@ -37,7 +37,7 @@
   
   /* Estilizando a navbar */
   .navbar {
-    background: (transparent);
+    background: transparent;
     padding: 1rem 0;
     min-height: 30px; /* Defina a altura desejada para a navbar */
     max-height: 120px;

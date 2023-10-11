@@ -10,7 +10,7 @@ import { ITransferencia } from '../interfaces/transferencia';
 })
 export class ContasService {
 
-  api = environment.api;
+  api = environment;
 
   endpoint = 'contas';
   constructor(private http: HttpClient) { }
