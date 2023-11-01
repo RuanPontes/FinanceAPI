@@ -12,6 +12,10 @@
 
 O sistema Finance Business está em andamento, sendo constantemente atualizado com modificações na estrutura do projeto e a finalização do backend, desenvolvido em Java com o uso do framework Spring.
 
+## Preview
+Atualmente apenas o front-end foi feito o deploy na nuvem, então não é possível acessar todas as funções da aplicação.
+ `https://finance-business-4xev-rgc2ilrw7-ruanpontes.vercel.app/ `
+
 ## Sobre o Projeto
 
 A finalidade deste projeto é aplicar os conhecimentos adquiridos em diversos cursos que já concluí ou estou prestes a concluir, aprimorando minhas habilidades de programação.
