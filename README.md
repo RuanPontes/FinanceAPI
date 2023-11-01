@@ -58,14 +58,29 @@ Siga as instruções abaixo para configurar e executar o sistema Finance Busines
 - [Visual Studio Code (VSCode)](https://code.visualstudio.com/)
 - [IntelliJ IDEA Ultimate](https://www.jetbrains.com/ide)
 
-### Configuração do Backend
+## Configuração do Docker
 
-1. Importe o projeto pelo arquivo POM.XML e abra como projeto.
-2. Inicie a aplicação.
+Para rodar a imagem Docker do projeto, abra o CMD e siga os passos abaixo:
 
-O backend estará em execução em  `http://localhost:8080/treinamento/swagger-ui.html#/`.
+1.Primeiro, copie a imagem do Docker Hub com o seguinte comando:
 
-### Configuração do Frontend
+- docker pull ruan0101/apenas-teste:v1.0
+
+2.Em seguida, execute a imagem. e rode os seguintes comandos:
+
+- Este comando irá listar quais imagens estão rodando. O objetivo é verificar a porta (a porta deve estar vazia).
+  - docker ps 
+
+- Comando para parar a imamge.
+  - docker stop (ID da imagem)
+
+- Este comando define a porta como 8080 e inicia a imagem novamente.
+  - docker run -p 80:8080 ruan0101/apenas-teste:v1.0
+
+
+A imagem estará em execução em  `http://localhost/treinamento/swagger-ui.html#/`.
+
+## Configuração do Frontend
 
 1. Navegue até o diretório do projeto frontend:
 2. Instale as dependências do Angular: (npm i)
